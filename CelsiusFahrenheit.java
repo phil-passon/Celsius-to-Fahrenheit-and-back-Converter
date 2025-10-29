@@ -1,5 +1,3 @@
-package com.philpasson.pp.converter;
-
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -23,11 +21,11 @@ public class CelsiusFahrenheit {
 
             switch (choice) {
                 case 1 -> {
-                    celsiusToFahrenheit(input, result, usingConverter);
+                    celsiusToFahrenheit(input);
                     usingConverter = askAgain(input);
                 }
                 case 2 -> {
-                    fahrenheitToCelsius(input, result, usingConverter);
+                    fahrenheitToCelsius(input);
                     usingConverter = askAgain(input);
                 }
                 case 3 -> {
@@ -51,10 +49,10 @@ public class CelsiusFahrenheit {
     }
 
 
-    private static void celsiusToFahrenheit(Scanner input, double result, boolean usingConverter) {
+    private static void celsiusToFahrenheit(Scanner input) {
         System.out.print("Enter Celsius to convert to Fahrenheit: ");
         double celsius = input.nextDouble();
-        result = celsiusToFahrenheitMathematics(celsius);
+        double result = celsiusToFahrenheitMathematics(celsius);
         System.out.println("Result: " + result + "°F");
         input.nextLine();
     }
@@ -63,10 +61,10 @@ public class CelsiusFahrenheit {
         return (celsius * 9.0 / 5.0) + 32.0;
     }
 
-    private static void fahrenheitToCelsius(Scanner input, double result, boolean usingConverter) {
+    private static void fahrenheitToCelsius(Scanner input) {
         System.out.print("Enter Fahrenheit to convert to Celsius: ");
         double fahrenheit = input.nextDouble();
-        result = fahrenheitToCelsiusMathematics(fahrenheit);
+        double result = fahrenheitToCelsiusMathematics(fahrenheit);
         System.out.println("Result: " + result + "°C");
         input.nextLine();
     }
@@ -84,7 +82,7 @@ public class CelsiusFahrenheit {
             continueLoop = true;
 
         } else if (answer != null &&
-                java.util.List.of("no", "na", "nah").contains(answer.trim().toLowerCase())) {
+                java.util.List.of("no", "na", "nah", "nope").contains(answer.trim().toLowerCase())) {
             continueLoop = false;
 
         } else {
