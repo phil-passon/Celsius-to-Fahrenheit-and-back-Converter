@@ -86,3 +86,5 @@ C=(F−32)×5/9
 | `celsiusToFahrenheitMathematics()` | **Pure Function Design** | This method only performs the calculation and takes no external dependencies (like `Scanner`), making it easy to test. |
 | `askAgain(Scanner input)` | **Input Validation & Looping** | Demonstrates how to check a user's textual response against a list of accepted answers (`yes`, `yea`, `no`, `nope`, etc.) to control the program loop. |
 $$
+
+This was just a practice to first of all learn some more JAVA, also to learn more about GitHub and how to structure ReadMes.
