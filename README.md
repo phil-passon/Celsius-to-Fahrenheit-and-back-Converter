@@ -68,13 +68,13 @@ The program implements the standard mathematical equations for temperature conve
 
 The Fahrenheit temperature F is calculated using the Celsius temperature C:
 
-F = C * 9/5 + 32
+F=(C×9/5)+32
 
 ### 2\. Fahrenheit to Celsius
 
 The Celsius temperature ($\text{C}$) is calculated using the Fahrenheit temperature ($\text{F}$):
 
-C = F - 32 * 5/9
+C=(F−32)×5/9
 
 -----
 
